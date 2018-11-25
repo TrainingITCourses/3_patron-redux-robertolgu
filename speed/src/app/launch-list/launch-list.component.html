@@ -1,0 +1,11 @@
+<div>Resultado Búsqueda ({{ filteredLaunches.length}}):</div>
+<div>
+  <ul>
+    <li *ngFor="let launch of filteredLaunches">
+      <h3>
+        {{ launch.name }}
+      </h3>
+    </li>
+  </ul>
+
+</div>

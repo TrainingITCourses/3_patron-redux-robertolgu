@@ -1,0 +1,15 @@
+
+
+<div>
+  Seleccionar criterio de búsqueda:
+  <select [(ngModel)]="criterio">
+      <option *ngFor="let o of options">
+          {{o.name}}
+       </option>
+  </select>
+
+  <div>Filtrar por {{criterio}}</div>
+
+  <app-filter [criterio]="criterio"></app-filter>
+
+</div>

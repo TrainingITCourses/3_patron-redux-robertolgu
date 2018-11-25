@@ -1,0 +1,23 @@
+<div>
+  <select [(ngModel)]="filterSelection" *ngIf="criterio === 'Estado'" (change)="selectChange()">
+      <option *ngFor="let s of statuses" [value]="s.id">
+          {{s.name}}
+      </option>
+  </select>
+
+  <select [(ngModel)]="filterSelection" *ngIf="criterio === 'Agencias'" (change)="selectChange()">
+      <option *ngFor="let a of agencies" [value]="a.id">
+          {{a.name}}
+      </option>
+  </select>
+
+  <select [(ngModel)]="filterSelection" *ngIf="criterio === 'Tipo'" (change)="selectChange()">
+      <option *ngFor="let m of missionTypes" [value]="m.id">
+          {{m.name}}
+      </option>
+  </select>
+
+  <div *ngIf="filteredLaunches">
+    <app-launch-list [filteredLaunches]="filteredLaunches"></app-launch-list>
+  </div>
+</div>
